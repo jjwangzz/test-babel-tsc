@@ -1,0 +1,33 @@
+// 方式1: 编译结果变为 React.createElement 的调用，但并没有添加导入import React from 'react'，需要手动导入
+// {
+//   "presets": [["@babel/preset-react"]]
+// }
+
+// 方式2: 同上
+// {
+//   "plugins": [["@babel/plugin-transform-react-jsx"]]
+// }
+
+// 方式1: 编译结果变成 _jsx 的调用，并且由编译器自动加入import { jsx as _jsx } from "react/jsx-runtime";
+{
+  "presets": [
+    [
+      "@babel/preset-react",
+      {
+        "runtime": "automatic"
+      }
+    ]
+  ]
+}
+
+// 方式2: 同上
+// {
+//   "plugins": [
+//     [
+//       "@babel/plugin-transform-react-jsx",
+//       {
+//         "runtime": "automatic"
+//       }
+//     ]
+//   ]
+// }

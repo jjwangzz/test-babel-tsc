@@ -1,0 +1,28 @@
+{
+  "name": "test-babel-tsc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build:babel": "babel babel-demo -x .jsx --config-file ./babel-demo/.babelrc -d babel-demo/dist",
+    "build:babel2": "babel babel-demo -x .jsx --config-file ./babel-demo/.babelrc -d babel-demo/dist2",
+    "build:tsc": "tsc -p tsc-demo/tsconfig.json",
+    "build:tsc-tc": "tsc -p tsc-type-check/tsconfig.json",
+    "build:babel-ts": "babel babel-ts-demo/src --config-file ./babel-ts-demo/.babelrc -x .ts -d babel-ts-demo/dist2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.23.4",
+    "@babel/core": "^7.23.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
+    "@babel/plugin-transform-react-jsx": "^7.23.4",
+    "@babel/preset-env": "^7.23.3",
+    "@babel/preset-react": "^7.23.3",
+    "@babel/preset-typescript": "^7.23.3",
+    "@types/react": "^18.2.38",
+    "typescript": "^5.3.2"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

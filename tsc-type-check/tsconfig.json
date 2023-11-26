@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "module": "ES6",
+    "jsx": "react-jsx",
+    "moduleResolution": "Node",
+    "outDir": "dist",
+    "rootDir": "src",
+    "allowJs": true
+  }
+}
